@@ -1,0 +1,52 @@
+## Docker commands used to build the application 
+# docker build -t techtrends .
+
+## Docker commands used to run the application
+# docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+# docker logs container_id
+
+## Logs from the container running the TechTrends application
+# docker logs container_id
+
+
+#Logs
+###
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2024-10-16 16:41:03,749 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-10-16 16:41:03,750 - INFO -  * Running on http://172.30.120.141:3111/ (Press CTRL+C to quit)
+2024-10-16 16:42:25,521 - INFO - 172.30.120.141 - - [16/Oct/2024 16:42:25] "GET / HTTP/1.1" 200 -
+2024-10-16 16:42:25,716 - INFO - 172.30.120.141 - - [16/Oct/2024 16:42:25] "GET /static/css/main.css HTTP/1.1" 200 -
+###
+
+#GitHub - No permissions
+$ docker push techtrends
+Using default tag: latest
+The push refers to repository [docker.io/library/techtrends]
+4890982c22a1: Preparing
+cb59de8cab8e: Preparing
+42e3bb1fc53a: Preparing
+2f7cd2815ae3: Preparing
+340412528d94: Preparing
+32ee710ca3c7: Preparing
+1767e4d52b5a: Preparing
+45b98afd69b3: Preparing
+2bce433c3a29: Preparing
+f91dc7a486d9: Preparing
+3e14a6961052: Preparing
+d50132f2fe78: Preparing
+32ee710ca3c7: Waiting
+1767e4d52b5a: Waiting
+2bce433c3a29: Waiting
+f91dc7a486d9: Waiting
+3e14a6961052: Waiting
+d50132f2fe78: Waiting
+45b98afd69b3: Waiting
+denied: requested access to the resource is denied
+

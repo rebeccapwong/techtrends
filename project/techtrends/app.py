@@ -1,5 +1,5 @@
 import sqlite3
-
+import logging
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
@@ -64,6 +64,55 @@ def create():
             return redirect(url_for('index'))
 
     return render_template('create.html')
+
+#Healthz Endpoint
+@app.route('/healthz', methods=['GET'])
+
+def health_check():
+    return jsonify(result="OK - healthy"), 200
+
+
+#Metrics endpoint
+@app.route('/metrics', methods=['GET'])
+
+def get_post_count():
+    return post.query.count()
+
+def metrics():
+    global db_connection_count
+    global metrics_response
+    db_connection_count += 1
+    post_count = get_post_count()
+    metrics_response = {"db_connection_count": db_connection_count, "post_count": post_count}
+    return jsonify(metrics_response), 200
+
+#Logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+@app.route('/articles/<int:article_id>', methods=['GET'])
+
+def get_article(article_id):
+    article = find_article_by_id(article_id)
+    if article:
+        logging.info(f'Article"{article.title} retrieved')
+        return jsonify(article, 200)
+    else: 
+        logging.error(f'Article with ID {article_id} not found (404 error)')
+        return jsonify({"error": "Article not found"}), 404
+
+@app.route('/about', methods = ['GET'])
+
+def about_page():
+    logging.info('About Us page retrieved.')
+    return jsonify({"message": "About Us"}), 200
+
+@app.route('/articles', methods=['POST'])
+def create_article():
+    # Simulate creating a new article
+    new_article = create_new_article()
+    logging.info(f'New article "{new_article.title}" created!')
+    return jsonify(new_article), 201
+
 
 # start the application on port 3111
 if __name__ == "__main__":
