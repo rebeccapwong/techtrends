@@ -23,7 +23,7 @@ def get_post(post_id):
 # Define the Flask application
 app = Flask(__name__)
 app.debug = True
-app.config['SECRET_KEY'] = 'your secret key'
+#app.config['SECRET_KEY'] = 'your secret key'
 
 # Define the main route of the web application 
 @app.route('/')
@@ -121,7 +121,7 @@ def create_article():
         title = input("Enter title: ")
         content = input("Enter content: ")
         new_article = {title, content}
-        logging.info(f'New article "{new_article.title}" created!')
+        logging.info(f'New article "{new_article.t}" created!')
     else:
         title = data.get('title')
         content = data.get('content')
