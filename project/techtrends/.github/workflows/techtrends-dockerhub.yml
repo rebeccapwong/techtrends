@@ -19,7 +19,7 @@ jobs:
         context: ./project/techtrends
         file: ./project/techtrends/Dockerfile
         push: true
-        tags: wongrebeccap/techtrends:latest 
+        tags: rebeccapwong/techtrends:latest 
         secrets: |
           DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}

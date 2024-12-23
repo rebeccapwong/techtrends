@@ -3,6 +3,8 @@ import logging
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
+db_connection_count = 0
+
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
@@ -20,6 +22,7 @@ def get_post(post_id):
 
 # Define the Flask application
 app = Flask(__name__)
+app.debug = True
 app.config['SECRET_KEY'] = 'your secret key'
 
 # Define the main route of the web application 
@@ -27,6 +30,7 @@ app.config['SECRET_KEY'] = 'your secret key'
 def index():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
+    print(posts)
     connection.close()
     return render_template('index.html', posts=posts)
 
@@ -68,21 +72,25 @@ def create():
 #Healthz Endpoint
 @app.route('/healthz', methods=['GET'])
 
-def health_check():
+def healthz():
     return jsonify(result="OK - healthy"), 200
+    #return jsonify({"message":"OK - healthy"}), 200
+    
+with app.app_context():
+    print(app.url_map)
 
 
 #Metrics endpoint
 @app.route('/metrics', methods=['GET'])
 
-def get_post_count():
-    return post.query.count()
-
 def metrics():
     global db_connection_count
     global metrics_response
     db_connection_count += 1
-    post_count = get_post_count()
+    print(db_connection_count)
+    connection = get_db_connection()
+    posts = connection.execute('SELECT * FROM posts').fetchall()
+    post_count = len(posts)
     metrics_response = {"db_connection_count": db_connection_count, "post_count": post_count}
     return jsonify(metrics_response), 200
 
@@ -91,9 +99,8 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 @app.route('/articles/<int:article_id>', methods=['GET'])
 
-def get_article(article_id):
-    article = find_article_by_id(article_id)
-    if article:
+def get_article(article):
+    if article == article.title:
         logging.info(f'Article"{article.title} retrieved')
         return jsonify(article, 200)
     else: 
@@ -106,14 +113,23 @@ def about_page():
     logging.info('About Us page retrieved.')
     return jsonify({"message": "About Us"}), 200
 
-@app.route('/articles', methods=['POST'])
+@app.route('/articles', methods=['GET','POST'])
 def create_article():
     # Simulate creating a new article
-    new_article = create_new_article()
-    logging.info(f'New article "{new_article.title}" created!')
+    data = request.get_json()
+    if data is None:
+        title = input("Enter title: ")
+        content = input("Enter content: ")
+        new_article = {title, content}
+        logging.info(f'New article "{new_article.title}" created!')
+    else:
+        title = data.get('title')
+        content = data.get('content')
+        new_article = {title, content}
+        logging.info(f'New article "{new_article[0]}" created!')
     return jsonify(new_article), 201
 
 
 # start the application on port 3111
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port='3111')
+   app.run(host='0.0.0.0', port='3111', debug=True)
