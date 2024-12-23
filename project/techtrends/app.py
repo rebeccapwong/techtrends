@@ -95,7 +95,8 @@ def metrics():
     return jsonify(metrics_response), 200
 
 #Logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 @app.route('/articles/<int:article_id>', methods=['GET'])
 
@@ -104,7 +105,7 @@ def get_article(article):
         logging.info(f'Article"{article.title} retrieved')
         return jsonify(article, 200)
     else: 
-        logging.error(f'Article with ID {article_id} not found (404 error)')
+        logging.error(f'Article with ID {article.title} not found (404 error)')
         return jsonify({"error": "Article not found"}), 404
 
 @app.route('/about', methods = ['GET'])
@@ -113,6 +114,7 @@ def about_page():
     logging.info('About Us page retrieved.')
     return jsonify({"message": "About Us"}), 200
 
+'''
 @app.route('/articles', methods=['GET','POST'])
 def create_article():
     # Simulate creating a new article
@@ -128,6 +130,7 @@ def create_article():
         new_article = {title, content}
         logging.info(f'New article "{new_article[0]}" created!')
     return jsonify(new_article), 201
+'''    
 
 
 # start the application on port 3111
