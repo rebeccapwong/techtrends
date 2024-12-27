@@ -23,7 +23,7 @@ def get_post(post_id):
 # Define the Flask application
 app = Flask(__name__)
 app.debug = True
-#app.config['SECRET_KEY'] = 'your secret key'
+app.config['SECRET_KEY'] = 'pass_word'
 
 # Define the main route of the web application 
 @app.route('/')
@@ -73,8 +73,11 @@ def create():
 @app.route('/healthz', methods=['GET'])
 
 def healthz():
+
+    ## log line
+    app.logger.info('Status request successful')
+ 
     return jsonify(result="OK - healthy"), 200
-    #return jsonify({"message":"OK - healthy"}), 200
     
 with app.app_context():
     print(app.url_map)
@@ -92,13 +95,17 @@ def metrics():
     posts = connection.execute('SELECT * FROM posts').fetchall()
     post_count = len(posts)
     metrics_response = {"db_connection_count": db_connection_count, "post_count": post_count}
-    return jsonify(metrics_response), 200
+    
+    ## log line
+    app.logger.info('Metrics request successful')
+
+    return jsonify(metrics_response), 200    
 
 #Logging
 
-logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+#logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-@app.route('/articles/<int:article_id>', methods=['GET'])
+@app.route('/articles/<int:post_id>', methods=['GET'])
 
 def get_article(article):
     if article == article.title:
@@ -113,25 +120,6 @@ def get_article(article):
 def about_page():
     logging.info('About Us page retrieved.')
     return jsonify({"message": "About Us"}), 200
-
-'''
-@app.route('/articles', methods=['GET','POST'])
-def create_article():
-    # Simulate creating a new article
-    data = request.get_json()
-    if data is None:
-        title = input("Enter title: ")
-        content = input("Enter content: ")
-        new_article = {title, content}
-        logging.info(f'New article "{new_article.t}" created!')
-    else:
-        title = data.get('title')
-        content = data.get('content')
-        new_article = {title, content}
-        logging.info(f'New article "{new_article[0]}" created!')
-    return jsonify(new_article), 201
-'''    
-
 
 # start the application on port 3111
 if __name__ == "__main__":
