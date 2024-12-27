@@ -13,6 +13,7 @@ def get_db_connection():
     return connection
 
 # Function to get a post using its ID
+
 def get_post(post_id):
     connection = get_db_connection()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
@@ -23,7 +24,31 @@ def get_post(post_id):
 # Define the Flask application
 app = Flask(__name__)
 app.debug = True
-app.config['SECRET_KEY'] = 'pass_word'
+app.config['SECRET_KEY'] = 'your password'
+
+#Set up Logger
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# Create handlers
+c_handler = logging.StreamHandler()  # For console output
+f_handler = logging.FileHandler('app.log')  # For file output
+
+# Set level for handlers
+c_handler.setLevel(logging.DEBUG)
+f_handler.setLevel(logging.DEBUG)
+
+# Create formatters and add them to handlers
+c_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+f_format = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+c_handler.setFormatter(c_format)
+f_handler.setFormatter(f_format)
+
+# Add handlers to the logger
+logger.addHandler(c_handler)
+logger.addHandler(f_handler)
+
 
 # Define the main route of the web application 
 @app.route('/')
@@ -90,7 +115,6 @@ def metrics():
     global db_connection_count
     global metrics_response
     db_connection_count += 1
-    print(db_connection_count)
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     post_count = len(posts)
@@ -105,15 +129,6 @@ def metrics():
 
 #logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-@app.route('/articles/<int:post_id>', methods=['GET'])
-
-def get_article(article):
-    if article == article.title:
-        logging.info(f'Article"{article.title} retrieved')
-        return jsonify(article, 200)
-    else: 
-        logging.error(f'Article with ID {article.title} not found (404 error)')
-        return jsonify({"error": "Article not found"}), 404
 
 @app.route('/about', methods = ['GET'])
 

@@ -66,3 +66,36 @@
 2024-12-23 13:52:20,923 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
 2024-12-27 09:18:38,310 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
 2024-12-27 09:18:38,428 - INFO -  * Restarting with stat
+2024-12-27 09:36:07,060 - WARNING -  * Debugger is active!
+2024-12-27 09:36:07,069 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 09:36:08,066 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-12-27 09:36:08,071 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 09:39:21,822 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 09:40:57,092 - INFO -  * Restarting with stat
+2024-12-27 09:40:57,727 - WARNING -  * Debugger is active!
+2024-12-27 09:40:57,737 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 09:40:59,382 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-12-27 09:40:59,383 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 09:46:11,924 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 09:46:12,038 - INFO -  * Restarting with stat
+2024-12-27 09:46:12,837 - WARNING -  * Debugger is active!
+2024-12-27 09:46:12,849 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 09:46:13,834 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-12-27 09:46:13,835 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 09:50:24,825 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 09:50:24,923 - INFO -  * Restarting with stat
+2024-12-27 09:50:25,817 - WARNING -  * Debugger is active!
+2024-12-27 09:50:25,831 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 09:50:26,850 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-12-27 09:50:26,852 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 09:50:40,688 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 09:50:40,763 - INFO -  * Restarting with stat
+2024-12-27 09:50:41,716 - WARNING -  * Debugger is active!
+2024-12-27 09:50:41,735 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 09:50:42,773 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2024-12-27 09:50:42,774 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
