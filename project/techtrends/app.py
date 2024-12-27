@@ -32,7 +32,7 @@ logger.setLevel(logging.DEBUG)
 
 # Create handlers
 c_handler = logging.StreamHandler()  # For console output
-f_handler = logging.FileHandler('app.log')  # For file output
+f_handler = logging.FileHandler('app.log', mode='a', delay=False)  # For file output
 
 # Set level for handlers
 c_handler.setLevel(logging.DEBUG)
@@ -49,14 +49,16 @@ f_handler.setFormatter(f_format)
 logger.addHandler(c_handler)
 logger.addHandler(f_handler)
 
+#logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 # Define the main route of the web application 
 @app.route('/')
 def index():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
-    print(posts)
     connection.close()
+    logger.info('Home page request successful.')
     return render_template('index.html', posts=posts)
 
 # Define how each individual article is rendered 
@@ -65,14 +67,23 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
+      logger.info('404 not found. Try another request.')
       return render_template('404.html'), 404
+    
     else:
+      logger.info('Post request successful.')
       return render_template('post.html', post=post)
 
+
 # Define the About Us page
-@app.route('/about')
+@app.route('/about', methods = ['GET'])
 def about():
     return render_template('about.html')
+
+@app.route('/about', methods = ['GET'])
+def about_page():
+    logger.info('About Us request successful.')
+    return jsonify({"message": "About Us"}), 200
 
 # Define the post creation functionality 
 @app.route('/create', methods=('GET', 'POST'))
@@ -91,7 +102,8 @@ def create():
             connection.close()
 
             return redirect(url_for('index'))
-
+        
+    logger.info('Create request successful.')
     return render_template('create.html')
 
 #Healthz Endpoint
@@ -100,7 +112,7 @@ def create():
 def healthz():
 
     ## log line
-    app.logger.info('Status request successful')
+    logger.info('Health request successful.')
  
     return jsonify(result="OK - healthy"), 200
     
@@ -121,20 +133,9 @@ def metrics():
     metrics_response = {"db_connection_count": db_connection_count, "post_count": post_count}
     
     ## log line
-    app.logger.info('Metrics request successful')
+    logger.info('Metrics request successful.')
 
     return jsonify(metrics_response), 200    
-
-#Logging
-
-#logging.basicConfig(filename="app.log", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-
-@app.route('/about', methods = ['GET'])
-
-def about_page():
-    logging.info('About Us page retrieved.')
-    return jsonify({"message": "About Us"}), 200
 
 # start the application on port 3111
 if __name__ == "__main__":

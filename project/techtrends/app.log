@@ -1,101 +1,60 @@
-2024-12-23 12:41:51,782 - WARNING -  * Debugger is active!
-2024-12-23 12:41:51,802 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 12:41:52,887 - WARNING -  * Running on all addresses.
+2024-12-27 10:35:34,305 - INFO -  * Restarting with stat
+2024-12-27 10:35:35,235 - WARNING -  * Debugger is active!
+2024-12-27 10:35:35,259 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:35:36,248 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 12:41:52,888 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 12:41:59,570 - INFO - 127.0.0.1 - - [23/Dec/2024 12:41:59] "GET /metrics HTTP/1.1" 200 -
-2024-12-23 12:42:19,543 - INFO - 127.0.0.1 - - [23/Dec/2024 12:42:19] "GET /create HTTP/1.1" 200 -
-2024-12-23 12:42:28,838 - INFO - 127.0.0.1 - - [23/Dec/2024 12:42:28] "GET /healthz HTTP/1.1" 200 -
-2024-12-23 12:43:08,363 - INFO - 127.0.0.1 - - [23/Dec/2024 12:43:08] "GET /create HTTP/1.1" 200 -
-2024-12-23 12:43:11,613 - INFO - 127.0.0.1 - - [23/Dec/2024 12:43:11] "GET /metrics HTTP/1.1" 200 -
-2024-12-23 12:43:54,190 - INFO - 127.0.0.1 - - [23/Dec/2024 12:43:54] "[35m[1mGET /articles/1 HTTP/1.1[0m" 500 -
-2024-12-23 12:44:54,780 - INFO - 127.0.0.1 - - [23/Dec/2024 12:44:54] "[35m[1mGET /articles/1 HTTP/1.1[0m" 500 -
-2024-12-23 12:45:00,437 - INFO -  * Restarting with stat
-2024-12-23 12:45:01,093 - WARNING -  * Debugger is active!
-2024-12-23 12:45:01,107 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 12:45:02,084 - WARNING -  * Running on all addresses.
+2024-12-27 10:35:36,250 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:37:22,520 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 10:37:22,606 - INFO -  * Restarting with stat
+2024-12-27 10:37:23,897 - WARNING -  * Debugger is active!
+2024-12-27 10:37:23,921 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:37:25,058 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 12:45:02,085 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 12:45:09,526 - INFO - 127.0.0.1 - - [23/Dec/2024 12:45:09] "[35m[1mGET /articles/1 HTTP/1.1[0m" 500 -
-2024-12-23 12:45:23,686 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-23 12:45:23,746 - INFO -  * Restarting with stat
-2024-12-23 12:45:24,411 - WARNING -  * Debugger is active!
-2024-12-23 12:45:24,423 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 12:45:25,401 - WARNING -  * Running on all addresses.
+2024-12-27 10:37:25,060 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:37:35,896 - INFO -  * Restarting with stat
+2024-12-27 10:37:36,577 - WARNING -  * Debugger is active!
+2024-12-27 10:37:36,588 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:37:37,652 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 12:45:25,402 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 12:45:38,819 - INFO - 127.0.0.1 - - [23/Dec/2024 12:45:38] "[35m[1mGET /articles/1 HTTP/1.1[0m" 500 -
-2024-12-23 12:52:50,706 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-23 12:52:50,774 - INFO -  * Restarting with stat
-2024-12-23 12:54:37,155 - INFO -  * Restarting with stat
-2024-12-23 12:54:37,833 - WARNING -  * Debugger is active!
-2024-12-23 12:54:37,842 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 12:54:38,814 - WARNING -  * Running on all addresses.
+2024-12-27 10:37:37,653 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:42:54,659 - INFO -  * Restarting with stat
+2024-12-27 10:42:55,265 - WARNING -  * Debugger is active!
+2024-12-27 10:42:55,275 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:42:56,212 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 12:54:38,815 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 12:54:45,725 - INFO - 127.0.0.1 - - [23/Dec/2024 12:54:45] "GET /2 HTTP/1.1" 200 -
-2024-12-23 12:54:49,369 - INFO - 127.0.0.1 - - [23/Dec/2024 12:54:49] "GET /3 HTTP/1.1" 200 -
-2024-12-23 12:54:52,255 - INFO - 127.0.0.1 - - [23/Dec/2024 12:54:52] "[33mGET /7 HTTP/1.1[0m" 404 -
-2024-12-23 12:56:29,775 - INFO - 127.0.0.1 - - [23/Dec/2024 12:56:29] "[33mGET /7 HTTP/1.1[0m" 404 -
-2024-12-23 12:56:37,894 - INFO - 127.0.0.1 - - [23/Dec/2024 12:56:37] "[33mGET /9 HTTP/1.1[0m" 404 -
-2024-12-23 12:56:49,395 - INFO - 127.0.0.1 - - [23/Dec/2024 12:56:49] "GET /healthz HTTP/1.1" 200 -
-2024-12-23 12:58:06,249 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-23 12:58:06,318 - INFO -  * Restarting with stat
-2024-12-23 12:58:07,104 - WARNING -  * Debugger is active!
-2024-12-23 12:58:07,115 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 12:58:08,140 - WARNING -  * Running on all addresses.
+2024-12-27 10:42:56,213 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:45:48,242 - INFO -  * Restarting with stat
+2024-12-27 10:45:48,863 - WARNING -  * Debugger is active!
+2024-12-27 10:45:48,875 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:45:49,800 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 12:58:08,140 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 12:58:41,140 - INFO - 127.0.0.1 - - [23/Dec/2024 12:58:41] "[33mGET /7 HTTP/1.1[0m" 404 -
-2024-12-23 12:58:44,809 - INFO - 127.0.0.1 - - [23/Dec/2024 12:58:44] "GET /6 HTTP/1.1" 200 -
-2024-12-23 12:59:17,351 - INFO - 127.0.0.1 - - [23/Dec/2024 12:59:17] "GET /create HTTP/1.1" 200 -
-2024-12-23 12:59:30,451 - INFO - 127.0.0.1 - - [23/Dec/2024 12:59:30] "GET /6 HTTP/1.1" 200 -
-2024-12-23 13:17:56,446 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-23 13:17:56,523 - INFO -  * Restarting with stat
-2024-12-23 13:17:57,404 - WARNING -  * Debugger is active!
-2024-12-23 13:17:57,418 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 13:17:58,415 - WARNING -  * Running on all addresses.
+2024-12-27 10:45:49,802 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:47:39,794 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 10:47:39,926 - INFO -  * Restarting with stat
+2024-12-27 10:47:40,831 - WARNING -  * Debugger is active!
+2024-12-27 10:47:40,841 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:47:41,770 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 13:17:58,416 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-23 13:52:18,325 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-23 13:52:18,441 - INFO -  * Restarting with stat
-2024-12-23 13:52:19,747 - WARNING -  * Debugger is active!
-2024-12-23 13:52:19,775 - INFO -  * Debugger PIN: 340-186-559
-2024-12-23 13:52:20,922 - WARNING -  * Running on all addresses.
+2024-12-27 10:47:41,771 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:50:30,700 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 10:50:30,807 - INFO -  * Restarting with stat
+2024-12-27 10:50:31,926 - WARNING -  * Debugger is active!
+2024-12-27 10:50:31,940 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:50:33,003 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-23 13:52:20,923 - INFO -  * Running on http://172.30.122.37:3111/ (Press CTRL+C to quit)
-2024-12-27 09:18:38,310 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-27 09:18:38,428 - INFO -  * Restarting with stat
-2024-12-27 09:36:07,060 - WARNING -  * Debugger is active!
-2024-12-27 09:36:07,069 - INFO -  * Debugger PIN: 340-186-559
-2024-12-27 09:36:08,066 - WARNING -  * Running on all addresses.
+2024-12-27 10:50:33,004 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:50:44,177 - INFO -  * Restarting with stat
+2024-12-27 10:50:44,791 - WARNING -  * Debugger is active!
+2024-12-27 10:50:44,800 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:50:45,737 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-27 09:36:08,071 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
-2024-12-27 09:39:21,822 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-27 09:40:57,092 - INFO -  * Restarting with stat
-2024-12-27 09:40:57,727 - WARNING -  * Debugger is active!
-2024-12-27 09:40:57,737 - INFO -  * Debugger PIN: 340-186-559
-2024-12-27 09:40:59,382 - WARNING -  * Running on all addresses.
+2024-12-27 10:50:45,738 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:52:49,428 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 10:52:49,536 - INFO -  * Restarting with stat
+2024-12-27 10:52:50,225 - WARNING -  * Debugger is active!
+2024-12-27 10:52:50,235 - INFO -  * Debugger PIN: 340-186-559
+2024-12-27 10:52:51,183 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-27 09:40:59,383 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
-2024-12-27 09:46:11,924 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-27 09:46:12,038 - INFO -  * Restarting with stat
-2024-12-27 09:46:12,837 - WARNING -  * Debugger is active!
-2024-12-27 09:46:12,849 - INFO -  * Debugger PIN: 340-186-559
-2024-12-27 09:46:13,834 - WARNING -  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-27 09:46:13,835 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
-2024-12-27 09:50:24,825 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-27 09:50:24,923 - INFO -  * Restarting with stat
-2024-12-27 09:50:25,817 - WARNING -  * Debugger is active!
-2024-12-27 09:50:25,831 - INFO -  * Debugger PIN: 340-186-559
-2024-12-27 09:50:26,850 - WARNING -  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-27 09:50:26,852 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
-2024-12-27 09:50:40,688 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
-2024-12-27 09:50:40,763 - INFO -  * Restarting with stat
-2024-12-27 09:50:41,716 - WARNING -  * Debugger is active!
-2024-12-27 09:50:41,735 - INFO -  * Debugger PIN: 340-186-559
-2024-12-27 09:50:42,773 - WARNING -  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-2024-12-27 09:50:42,774 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:52:51,183 - INFO -  * Running on http://192.168.0.38:3111/ (Press CTRL+C to quit)
+2024-12-27 10:53:47,073 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2024-12-27 10:53:47,164 - INFO -  * Restarting with stat
