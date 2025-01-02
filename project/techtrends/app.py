@@ -2,6 +2,7 @@ import sqlite3
 import logging
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
+import sys
 
 db_connection_count = 0
 
@@ -31,7 +32,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 # Create handlers
-c_handler = logging.StreamHandler()  # For console output
+c_handler = logging.StreamHandler(sys.stdout)  # For console output
 f_handler = logging.FileHandler('app.log', mode='a', delay=False)  # For file output
 
 # Set level for handlers
