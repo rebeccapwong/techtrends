@@ -77,3 +77,45 @@
 2025-01-02 14:31:47,105 - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 2025-01-02 14:31:47,106 - INFO -  * Running on http://192.168.0.69:3111/ (Press CTRL+C to quit)
+2025-01-02 17:20:16,376 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2025-01-02 17:20:17,024 - INFO -  * Restarting with stat
+2025-01-02 17:20:20,651 - WARNING -  * Debugger is active!
+2025-01-02 17:20:20,670 - INFO -  * Debugger PIN: 340-186-559
+2025-01-02 17:20:21,611 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-01-02 17:20:21,612 - INFO -  * Running on http://192.168.0.69:3111/ (Press CTRL+C to quit)
+2025-01-06 17:49:11,090 - INFO -  * Restarting with stat
+2025-01-06 17:49:14,388 - WARNING -  * Debugger is active!
+2025-01-06 17:49:14,417 - INFO -  * Debugger PIN: 340-186-559
+2025-01-06 17:49:15,652 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-01-06 17:49:15,652 - INFO -  * Running on http://172.30.115.228:3111/ (Press CTRL+C to quit)
+2025-01-06 17:50:48,561 - ERROR - 172.30.115.228 - - [06/Jan/2025 17:50:48] code 400, message Bad request version ("\x1b/¢\x93\x02ÂO%]\x00\x00*¿,¿+¿0¿/\x00\x9f\x00\x9e¿$¿#¿(¿'¿")
+2025-01-06 17:51:30,214 - INFO - Metrics request successful.
+2025-01-06 17:51:30,218 - INFO - 172.30.115.228 - - [06/Jan/2025 17:51:30] "GET /metrics HTTP/1.1" 200 -
+2025-01-06 17:51:44,317 - INFO - 172.30.115.228 - - [06/Jan/2025 17:51:44] "[33mGET /index HTTP/1.1[0m" 404 -
+2025-01-06 17:51:48,386 - INFO - Post request successful.
+2025-01-06 17:51:48,423 - INFO - 172.30.115.228 - - [06/Jan/2025 17:51:48] "GET /1 HTTP/1.1" 200 -
+2025-01-06 17:51:51,575 - INFO - Metrics request successful.
+2025-01-06 17:51:51,575 - INFO - 172.30.115.228 - - [06/Jan/2025 17:51:51] "GET /metrics HTTP/1.1" 200 -
+2025-01-06 17:51:59,478 - INFO - Metrics request successful.
+2025-01-06 17:51:59,479 - INFO - 172.30.115.228 - - [06/Jan/2025 17:51:59] "GET /metrics HTTP/1.1" 200 -
+2025-01-06 17:52:39,934 - INFO -  * Detected change in 'C:\\Users\\wongr\\nd064_course_1\\exercises\\python-helloworld\\nd064_course_1\\project\\techtrends\\app.py', reloading
+2025-01-06 17:52:40,860 - INFO -  * Restarting with stat
+2025-01-06 17:52:44,019 - WARNING -  * Debugger is active!
+2025-01-06 17:52:44,036 - INFO -  * Debugger PIN: 340-186-559
+2025-01-06 17:52:45,069 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-01-06 17:52:45,070 - INFO -  * Running on http://172.30.115.228:3111/ (Press CTRL+C to quit)
+2025-01-06 17:52:45,285 - INFO - Metrics request successful.
+2025-01-06 17:52:45,286 - INFO - 172.30.115.228 - - [06/Jan/2025 17:52:45] "GET /metrics HTTP/1.1" 200 -
+2025-01-06 17:52:50,240 - INFO - Metrics request successful.
+2025-01-06 17:52:50,241 - INFO - 172.30.115.228 - - [06/Jan/2025 17:52:50] "GET /metrics HTTP/1.1" 200 -
+2025-01-06 17:52:55,209 - INFO - Post request successful.
+2025-01-06 17:52:55,243 - INFO - 172.30.115.228 - - [06/Jan/2025 17:52:55] "GET /1 HTTP/1.1" 200 -
+2025-01-06 17:52:57,951 - INFO - Post request successful.
+2025-01-06 17:52:57,957 - INFO - 172.30.115.228 - - [06/Jan/2025 17:52:57] "GET /2 HTTP/1.1" 200 -
+2025-01-06 17:53:01,254 - INFO - 404 not found. Try another request.
+2025-01-06 17:53:01,260 - INFO - 172.30.115.228 - - [06/Jan/2025 17:53:01] "[33mGET /19 HTTP/1.1[0m" 404 -
+2025-01-06 17:53:04,949 - INFO - Metrics request successful.
+2025-01-06 17:53:04,950 - INFO - 172.30.115.228 - - [06/Jan/2025 17:53:04] "GET /metrics HTTP/1.1" 200 -

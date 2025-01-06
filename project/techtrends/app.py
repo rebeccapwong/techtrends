@@ -16,6 +16,8 @@ def get_db_connection():
 # Function to get a post using its ID
 
 def get_post(post_id):
+    global db_connection_count
+    db_connection_count += 1
     connection = get_db_connection()
     post = connection.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
@@ -32,7 +34,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 # Create handlers
-c_handler = logging.StreamHandler(sys.stdout)  # For console output
+c_handler = logging.StreamHandler(sys.stderr)  # For console output
 f_handler = logging.FileHandler('app.log', mode='a', delay=False)  # For file output
 
 # Set level for handlers
@@ -56,6 +58,8 @@ logger.addHandler(f_handler)
 # Define the main route of the web application 
 @app.route('/')
 def index():
+    global db_connection_count
+    db_connection_count += 1
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
     connection.close()
@@ -96,6 +100,8 @@ def create():
         if not title:
             flash('Title is required!')
         else:
+            global db_connection_count
+            db_connection_count += 1
             connection = get_db_connection()
             connection.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
@@ -132,6 +138,7 @@ def metrics():
     posts = connection.execute('SELECT * FROM posts').fetchall()
     post_count = len(posts)
     metrics_response = {"db_connection_count": db_connection_count, "post_count": post_count}
+    print(metrics_response)
     
     ## log line
     logger.info('Metrics request successful.')
